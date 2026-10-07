@@ -43,6 +43,7 @@ crop-advisor/
 ├── app.py                    # Streamlit application
 ├── requirements.txt          # Python dependencies
 ├── karnataka_crop_dataset_V2.csv
+├── Crop_recommendation.csv   # Fallback dataset
 ├── README.md
 └── WORKING_EXPLAINED.md      # Code walkthrough
 ```
@@ -62,7 +63,7 @@ The app opens at `http://localhost:8501`. Alternatively, upload a CSV in the sid
 
 Streamlit Community Cloud supports this app:
 
-1. Upload the project files, including `data/karnataka_crop_dataset_V2.csv`, to a GitHub repository.
+1. Upload the project files, including `karnataka_crop_dataset_V2.csv`, to a GitHub repository.
 2. Create a new app at [share.streamlit.io](https://share.streamlit.io), select the repository and `app.py`, and deploy.
 
 ## Technology
