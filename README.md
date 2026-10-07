@@ -17,7 +17,7 @@ The crop suggestion is based on the average feature profile for each crop. It st
 |---|---|
 | Name | Karnataka Crop Dataset for ML models |
 | Source | [Kaggle](https://www.kaggle.com/datasets/rmeghaganesh/karnataka-crop-dataset-for-ml-models) |
-| File | `data/karnataka_crop_dataset_V2.csv` |
+| File | `karnataka_crop_dataset_V2.csv` (in `data/` or beside `app.py`) |
 | Size | 21,960 rows × 12 columns, 39 crops |
 
 This dataset is described as semi-synthetic: records are generated using ranges informed by cited government and research sources, rather than being direct field measurements. It is specific to Karnataka. The app uses the seven numeric soil and weather features; additional columns are retained for display and crop summaries.
@@ -42,15 +42,14 @@ The Crop Advisor flags inputs below the dataset's 5th percentile or above its 95
 crop-advisor/
 ├── app.py                    # Streamlit application
 ├── requirements.txt          # Python dependencies
-├── data/
-│   └── karnataka_crop_dataset_V2.csv
+├── karnataka_crop_dataset_V2.csv
 ├── README.md
 └── WORKING_EXPLAINED.md      # Code walkthrough
 ```
 
 ## Run locally
 
-Place `karnataka_crop_dataset_V2.csv` in the `data` folder, then run:
+Place `karnataka_crop_dataset_V2.csv` in the `data` folder or beside `app.py`, then run:
 
 ```bash
 pip install -r requirements.txt

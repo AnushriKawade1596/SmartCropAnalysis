@@ -17,6 +17,7 @@ from sklearn.metrics import silhouette_score
 BASE_DIR = Path(__file__).resolve().parent
 DATASET_PATHS = (
     BASE_DIR / "data" / "karnataka_crop_dataset_V2.csv",
+    BASE_DIR / "karnataka_crop_dataset_V2.csv",
     BASE_DIR / "Crop_recommendation.csv",
 )
 

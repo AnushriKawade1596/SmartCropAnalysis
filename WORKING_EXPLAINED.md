@@ -8,7 +8,7 @@ This document explains the data flow, crop suggestions, and farming-zone analysi
 - `pandas` loads and summarizes the crop dataset.
 - scikit-learn provides feature scaling, K-Means clustering, PCA, and silhouette scoring.
 - `FEATURES` lists the seven soil and weather inputs; `TARGET` is the dataset's `label` column.
-- The app looks for `data/karnataka_crop_dataset_V2.csv` beside `app.py`, then falls back to `Crop_recommendation.csv` beside `app.py`. The sidebar also accepts a CSV upload.
+- The app looks for `data/karnataka_crop_dataset_V2.csv`, then `karnataka_crop_dataset_V2.csv`, then `Crop_recommendation.csv` beside `app.py`. The sidebar also accepts a CSV upload.
 - The active Karnataka dataset has 21,960 rows and 12 columns. The app uses its seven numeric soil/weather inputs and crop `label`; extra columns are allowed.
 - `load_data()` is cached so the file does not need to be reread on every UI interaction.
 - Dataset selection and random-seed changes are grouped in a sidebar form and applied when submitted. Data-tab feature choice, K-Means settings, and crop-advisor inputs are also form-based, so changing controls does not rerun calculations until submission. Submitted K-Means settings and crop recommendations are retained across later Streamlit reruns.
@@ -48,6 +48,6 @@ The crop profile is an easy-to-explain comparison against historical averages. I
 
 | Problem | Fix |
 |---|---|
-| Dataset not found | Put `karnataka_crop_dataset_V2.csv` in the `data` folder, put `Crop_recommendation.csv` beside `app.py`, or upload a CSV in the sidebar. |
+| Dataset not found | Put `karnataka_crop_dataset_V2.csv` in `data` or beside `app.py`, put `Crop_recommendation.csv` beside `app.py`, or upload a CSV in the sidebar. |
 | `ModuleNotFoundError` | Run `pip install -r requirements.txt`. |
-| Deployed app cannot find the dataset | Include `data/karnataka_crop_dataset_V2.csv` (or the fallback `Crop_recommendation.csv` beside `app.py`) in the repository. |
+| Deployed app cannot find the dataset | Include `data/karnataka_crop_dataset_V2.csv`, `karnataka_crop_dataset_V2.csv` beside `app.py`, or the fallback `Crop_recommendation.csv` beside `app.py` in the repository. |
